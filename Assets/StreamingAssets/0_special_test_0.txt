@@ -1,0 +1,18 @@
+[name="test"]  选择标记Descision测试
+[Unknow #无效标记测试]
+[Decision(options="选项1;选项2;选项3", values="1;2;3")]
+[Predicate(references="1")]
+[Unknow #无效标记测试]
+[Unknow #无效标记测试]
+[name="test"]  你选了1
+[Predicate(references="2")]
+[name="test"]  你选了2
+[name="test"]  文字
+[name="test"]  文字
+[name="test"]  文字
+[Predicate(references="3")]
+[name="test"]  你选了3
+[name="test"]  文字
+[Unknow #无效标记测试]
+[Predicate(references="1;2;3")]
+[name="test"]  选择标记结束

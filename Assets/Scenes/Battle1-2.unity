@@ -2822,7 +2822,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4087
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -3320,7 +3320,7 @@ GameObject:
   - component: {fileID: 317949618}
   - component: {fileID: 317949617}
   - component: {fileID: 317949616}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Object_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9030,7 +9030,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4087
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -10148,7 +10148,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2679
+    m_Bits: 6775
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -10554,7 +10554,7 @@ GameObject:
   - component: {fileID: 991906280}
   - component: {fileID: 991906279}
   - component: {fileID: 991906278}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Object_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16665,7 +16665,7 @@ GameObject:
   - component: {fileID: 1635531513}
   - component: {fileID: 1635531512}
   - component: {fileID: 1635531511}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Object_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20196,7 +20196,7 @@ GameObject:
   - component: {fileID: 2102356685}
   - component: {fileID: 2102356684}
   - component: {fileID: 2102356683}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Object_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20611,7 +20611,7 @@ GameObject:
   - component: {fileID: 2147463607}
   - component: {fileID: 2147463606}
   - component: {fileID: 2147463605}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Object_1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

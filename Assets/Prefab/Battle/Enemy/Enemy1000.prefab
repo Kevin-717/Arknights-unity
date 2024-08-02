@@ -221,8 +221,8 @@ GameObject:
   - component: {fileID: 8559939720889230664}
   - component: {fileID: -3445566184401762541}
   - component: {fileID: 3497446944982312614}
-  - component: {fileID: 4149145243178020359}
-  - component: {fileID: -6325848441959295994}
+  - component: {fileID: 4093500839277219159}
+  - component: {fileID: 7646068550885713083}
   m_Layer: 8
   m_Name: Enemy1000
   m_TagString: Enemy
@@ -309,9 +309,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4536855544549114805}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -451,7 +451,7 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &4149145243178020359
+--- !u!114 &4093500839277219159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -486,14 +486,14 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.32
-  pickNextWaypointDist: 0.2
+  slowdownDistance: 0
+  pickNextWaypointDist: 2
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &-6325848441959295994
+--- !u!114 &7646068550885713083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

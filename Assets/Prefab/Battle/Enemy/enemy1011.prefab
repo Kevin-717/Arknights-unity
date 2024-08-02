@@ -320,9 +320,10 @@ GameObject:
   - component: {fileID: 4224559007626652768}
   - component: {fileID: 3537844844531919115}
   - component: {fileID: 15631921092255384}
-  - component: {fileID: 4912955676131223369}
-  - component: {fileID: 6428571328240151338}
   - component: {fileID: 5374378719562762219}
+  - component: {fileID: 4931806143452934939}
+  - component: {fileID: 6516135881289430456}
+  - component: {fileID: 1819968683597816757}
   m_Layer: 8
   m_Name: enemy1011
   m_TagString: Enemy
@@ -526,7 +527,63 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &4912955676131223369
+--- !u!114 &5374378719562762219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7655900849641188237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ec74b42af2fa64c9ef37dee7ef8c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.8
+  move_line: []
+  move_index: 0
+  hp: 1600
+  HpAnim: {fileID: 7747061478536039984}
+  HpBar: {fileID: 6338361187934475623}
+  damage: 200
+  Move_anim: Move_Loop
+  Idle_anim: Idle
+  Attack_anim: Attack
+  Die_anim: Die
+  state: 
+  useSpecial: 0
+  def: 50
+  adef: 50
+  haveStart: 0
+  dt: 1
+--- !u!54 &4931806143452934939
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7655900849641188237}
+  serializedVersion: 4
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &6516135881289430456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -561,14 +618,14 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.32
-  pickNextWaypointDist: 0.2
+  slowdownDistance: 0
+  pickNextWaypointDist: 2
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &6428571328240151338
+--- !u!114 &1819968683597816757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -582,35 +639,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &5374378719562762219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7655900849641188237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ec74b42af2fa64c9ef37dee7ef8c49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.8
-  move_line: []
-  move_index: 0
-  hp: 1600
-  HpAnim: {fileID: 7747061478536039984}
-  HpBar: {fileID: 6338361187934475623}
-  damage: 200
-  Move_anim: Move_Loop
-  Idle_anim: Idle
-  Attack_anim: Attack
-  Die_anim: Die
-  state: 
-  useSpecial: 0
-  def: 50
-  adef: 50
-  haveStart: 0
-  dt: 1
 --- !u!1 &7866614690736625028
 GameObject:
   m_ObjectHideFlags: 0

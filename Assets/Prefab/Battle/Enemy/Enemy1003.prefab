@@ -221,9 +221,9 @@ GameObject:
   - component: {fileID: 8559939720889230664}
   - component: {fileID: 5948812662311153855}
   - component: {fileID: 3534894718312385952}
-  - component: {fileID: 6310917376629094917}
-  - component: {fileID: 897536776972922730}
   - component: {fileID: 1823204976533527324}
+  - component: {fileID: -5810138448377128877}
+  - component: {fileID: 6442831728794257853}
   m_Layer: 8
   m_Name: Enemy1003
   m_TagString: Enemy
@@ -308,9 +308,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4536855544549114805}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4536855544549114805}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
   m_Name: 
@@ -454,7 +454,36 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &6310917376629094917
+--- !u!114 &1823204976533527324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536855544549114805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ec74b42af2fa64c9ef37dee7ef8c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.9
+  move_line: []
+  move_index: 0
+  hp: 1400
+  HpAnim: {fileID: 4966663241255571957}
+  HpBar: {fileID: 2105184429502642582}
+  damage: 240
+  Move_anim: Move_Loop
+  Idle_anim: Idle
+  Attack_anim: Combat
+  Die_anim: Die
+  state: 
+  useSpecial: 0
+  def: 100
+  adef: 0
+  haveStart: 0
+  dt: 0
+--- !u!114 &-5810138448377128877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -489,14 +518,14 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.32
-  pickNextWaypointDist: 0.2
+  slowdownDistance: 0
+  pickNextWaypointDist: 2
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &897536776972922730
+--- !u!114 &6442831728794257853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -510,35 +539,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &1823204976533527324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4536855544549114805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ec74b42af2fa64c9ef37dee7ef8c49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.9
-  move_line: []
-  move_index: 0
-  hp: 1400
-  HpAnim: {fileID: 4966663241255571957}
-  HpBar: {fileID: 2105184429502642582}
-  damage: 240
-  Move_anim: Move_Loop
-  Idle_anim: Idle
-  Attack_anim: Combat
-  Die_anim: Die
-  state: 
-  useSpecial: 0
-  def: 100
-  adef: 0
-  haveStart: 0
-  dt: 0
 --- !u!1 &6641773145520889851
 GameObject:
   m_ObjectHideFlags: 0

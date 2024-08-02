@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour{
             Destroy(gameObject);
             return;
         }
-        if(Vector3.Distance(move_line[move_index].transform.position,transform.position) <= 0.2f){
+        if(Vector3.Distance(move_line[move_index].transform.position,transform.position) <= 0.7f){
             if(move_line[move_index].GetComponent<PointInfo>().isWait == PointType.wait){
                 waitTime = move_line[move_index].GetComponent<PointInfo>().waitTime;
                 state = Idle_anim;

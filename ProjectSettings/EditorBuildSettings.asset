@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelEnter.unity
     guid: d3100104e29d0fb4e9a92f8044e4ecfe
   - enabled: 1
+    path: Assets/Scenes/LevelList0.unity
+    guid: cd0602922dba61748bac1d87b3a13f1e
+  - enabled: 1
     path: Assets/Scenes/LevelList1.unity
     guid: 1b61c5599901ef44396b94cbf032f230
   - enabled: 1
@@ -26,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharList.unity
     guid: 2caf70c88633dd046bcb764f3ae571e3
+  - enabled: 1
+    path: Assets/Scenes/Battle0-1.unity
+    guid: b7a25926a89798e4e967543dfc4f53ea
   - enabled: 1
     path: Assets/Scenes/Battle1-1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab

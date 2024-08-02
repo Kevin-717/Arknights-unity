@@ -90,7 +90,7 @@ public class StoryLoader : MonoBehaviour
     private void Update() {
         if((!wait) && (!wait2)){
             if(decision){
-                if(play_index > select_range){
+                if(play_index > select_range && (!debug)){
                     decision = false;
                     play_index = current_decision.end_index;
                 }
@@ -140,6 +140,7 @@ public class StoryLoader : MonoBehaviour
                 char0_mask.enabled = false;
                 char1_mask.enabled = false;
                 if(storyItem.char_images.Count == 1){
+                    Debug.Log(storyItem.char_images[0]);
                     char_0.enabled = true;
                     char0_mask.sprite = Resources.Load<Sprite>(storyItem.char_images[0]);
                     char0_mask.enabled = false;
@@ -148,6 +149,8 @@ public class StoryLoader : MonoBehaviour
                 }else{
                     char_0.enabled = true;
                     char_1.enabled = true;
+                    Debug.Log(storyItem.char_images[0]);
+                    Debug.Log(storyItem.char_images[1]);
                     char0_mask.sprite = Resources.Load<Sprite>(storyItem.char_images[0]);
                     char1_mask.sprite = Resources.Load<Sprite>(storyItem.char_images[1]);
                     char_0.sprite = Resources.Load<Sprite>(storyItem.char_images[0]);
@@ -248,10 +251,12 @@ public class StoryLoader : MonoBehaviour
                     string name = ReMatch(line,"name=\"(.*?)\"");
                     name = name.Split("\"")[1];
                     chars.Add("story_src/Avg_"+name.Split("#")[0]);
+                    Debug.Log(name.Split("#")[0]);
                     if(line.IndexOf("name2") != -1){
                         string char2 = ReMatch(line,"name2=\"(.*?)\"");
                         char2 = char2.Split("\"")[1];
                         chars.Add("story_src/Avg_"+char2.Split("#")[0]);
+                        Debug.Log(char2.Split("#")[0]);
                     }
                     int foc = 0;
                     if(line.IndexOf("focus") != -1){

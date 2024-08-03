@@ -8214,6 +8214,7 @@ MonoBehaviour:
   lifeText: {fileID: 329543007}
   life: 5
   enemyNum: 0
+  parent_scene: 
   runImage: {fileID: -333694956, guid: bc0295edcf8f17a4d9ec264b889d59e0, type: 3}
   pauseImage: {fileID: -977435905, guid: 1f603aa2cba37864d83ede2b3c1c8c42, type: 3}
   _1x: {fileID: -709176768, guid: 201b5b6442c1e234c9886a3a31497c95, type: 3}
@@ -29565,7 +29566,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0b02502cd152a29449ff34c41f8449d9, type: 3}
 --- !u!4 &2008483539 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0b02502cd152a29449ff34c41f8449d9, type: 3}
+  m_CorrespondingSourceObject: {fileID: -8844611884017861007, guid: 0b02502cd152a29449ff34c41f8449d9, type: 3}
   m_PrefabInstance: {fileID: 2008483538}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2008483540 stripped

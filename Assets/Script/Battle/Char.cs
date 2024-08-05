@@ -195,6 +195,9 @@ public class Char : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if(other.gameObject.tag == "Enemy" && state != Die_anim && state != Start_anim && state != "Default"){
             if(other.gameObject.GetComponentInParent<Enemy>().hp > 0){
+                if(ct == charType.lowLand && other.gameObject.GetComponentInParent<Enemy>().enemyType == Enemy.EnemyType.Fly){
+                    return;
+                }
                 attackObject = other.gameObject;
                 state = Attack_anim;
             }

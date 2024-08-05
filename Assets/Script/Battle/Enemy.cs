@@ -34,6 +34,13 @@ public class Enemy : MonoBehaviour{
     public float adef = 50;
     public bool haveStart = false;
     public BattleController.damageType dt;
+    public enum EnemyType
+    {
+        Ground,
+        Fly
+    }
+    public EnemyType enemyType;
+    private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +53,7 @@ public class Enemy : MonoBehaviour{
         if(!haveStart){
             state = Move_anim;
         }
+        rb = GetComponent<Rigidbody>();
     }
     private void Move(){
         if(move_index == move_line.Count){
@@ -61,14 +69,33 @@ public class Enemy : MonoBehaviour{
             }
             move_index++;
         }else{
-            aIDestinationSetter.target = move_line[move_index].transform;
-            float x = transform.position.x;
-            float dx = move_line[move_index].transform.position.x;
-            float mx = (Mathf.Abs(x-dx)<=0.1f)?0:(x>dx?-1:1);
-            if(mx < 0){
-                transform.eulerAngles = new Vector3(30,180,0);
+            if(enemyType == EnemyType.Fly){
+                float x = transform.position.x;
+                float y = transform.position.y;
+                float z = transform.position.z;
+                float dx = move_line[move_index].transform.position.x;
+                float dy = move_line[move_index].transform.position.y;
+                float dz = move_line[move_index].transform.position.z;
+                float mx = (Mathf.Abs(x-dx)<=0.1f)?0:(x>dx?-1:1);
+                float my = (Mathf.Abs(y-dy)<=0.1f)?0:(y>dy?-1:1);
+                float mz = (Mathf.Abs(z-dz)<=0.1f)?0:(z>dz?-1:1);
+                if(mx < 0){
+                    transform.eulerAngles = new Vector3(30,180,0);
+                }else{
+                    transform.eulerAngles = new Vector3(-30,0,0);
+                }
+                Vector3 movement = new Vector3(mx,my,mz);
+                rb.transform.Translate(movement*speed*Time.deltaTime);
             }else{
-                transform.eulerAngles = new Vector3(-30,0,0);
+                aIDestinationSetter.target = move_line[move_index].transform;
+                float x = transform.position.x;
+                float dx = move_line[move_index].transform.position.x;
+                float mx = (Mathf.Abs(x-dx)<=0.1f)?0:(x>dx?-1:1);
+                if(mx < 0){
+                    transform.eulerAngles = new Vector3(30,180,0);
+                }else{
+                    transform.eulerAngles = new Vector3(-30,0,0);
+                }
             }
             // Vector3 movement = new Vector3(mx,my,mz);
             // transform.Translate(movement*speed*Time.deltaTime);
@@ -93,7 +120,9 @@ public class Enemy : MonoBehaviour{
             }
         }
         if(state == Move_anim){
-            aIPath.maxSpeed = speed;
+            if(enemyType == EnemyType.Ground){
+                aIPath.maxSpeed = speed;
+            }
             Move();
         }else if(state == Idle_anim){
             aIPath.maxSpeed = 0;
@@ -149,6 +178,9 @@ public class Enemy : MonoBehaviour{
         }
     }
     private void OnTriggerStay(Collider other) {
+        if(enemyType == EnemyType.Fly){
+            return;
+        }
         if(state != Die_anim && state != Attack_anim){
             if(other.gameObject.tag == "attackTarget"){
                 if(other.gameObject.GetComponentInParent<Char>().hp > 0 && 

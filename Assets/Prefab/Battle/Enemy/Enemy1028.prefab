@@ -483,6 +483,7 @@ MonoBehaviour:
   adef: 0
   haveStart: 0
   dt: 0
+  enemyType: 0
 --- !u!114 &-3363300436082031444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,8 +520,8 @@ MonoBehaviour:
   maxAcceleration: -2.5
   rotationSpeed: 360
   slowdownDistance: 0
-  pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  pickNextWaypointDist: 0.5
+  endReachedDistance: 0.25
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0

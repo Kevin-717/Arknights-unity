@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2937505770102396005}
   - component: {fileID: 3733112768147701427}
   - component: {fileID: 3469285948872756485}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LinePreview
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -266,5 +266,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 112
   m_CollisionDetection: 0
